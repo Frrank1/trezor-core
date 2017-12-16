@@ -40,6 +40,9 @@ BLACK       = rgb(0x00, 0x00, 0x00)
 WHITE       = rgb(0xFA, 0xFA, 0xFA)
 BLACKISH    = rgb(0x30, 0x30, 0x30)
 
+TITLE_GREY  = rgb(0x9B, 0x9B, 0x9B)
+ORANGE_ICON = rgb(0xF5, 0xA6, 0x23)
+
 # common color styles
 BG = BLACK
 FG = WHITE
@@ -47,11 +50,13 @@ FG = WHITE
 # icons
 ICON_RESET    = 'trezor/res/header_icons/reset.toig'
 ICON_WIPE     = 'trezor/res/header_icons/wipe.toig'
-ICON_RECOVERY = 'trezor/res/header_icons/recovery.toig'
+ICON_RECOVERY = 'trezor/res/header_icons/reset.toig'
 ICON_CLEAR    = 'trezor/res/clear.toig'
 ICON_CONFIRM  = 'trezor/res/confirm.toig'
+ICON_CONFIRM2 = 'trezor/res/confirm2.toig'
 ICON_LOCK     = 'trezor/res/lock.toig'
 ICON_SEND     = 'trezor/res/send.toig'
+ICON_CLICK    = 'trezor/res/click.toig'
 
 # buttons
 BTN_DEFAULT = {

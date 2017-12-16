@@ -56,6 +56,7 @@ class Button(Widget):
         ax, ay, aw, ah = self.area
         tx = ax + aw // 2
         ty = ay + ah // 2 + 8
+
         display.bar_radius(ax, ay, aw, ah,
                            s['border-color'],
                            ui.BG,
