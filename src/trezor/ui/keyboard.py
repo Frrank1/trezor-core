@@ -42,7 +42,7 @@ class KeyboardMultiTap(ui.Widget):
         self.pending_index = 0
 
         self.key_buttons = key_buttons()
-        self.sugg_button = Button((57, 0, 240 - 63, 57), '')
+        self.sugg_button = Button((63, 0, 240 - 65, 57), '')
         self.bs_button = Button((6, 5, 57, 60),
                                 res.load('trezor/res/left.toig'),
                                 normal_style=ui.BTN_CLEAR,
@@ -50,18 +50,19 @@ class KeyboardMultiTap(ui.Widget):
 
     def render(self):
         if self.content:
+            display.bar(62, 8, 168, 54, ui.BG)
             content_width = display.text_width(self.content, ui.BOLD)
-            offset_x = 74
+            offset_x = 78
             if self.content == self.sugg_word:
                 # confirm button + content
-                display.bar_radius(63, 8, 168, 54, ui.GREEN, ui.BG, ui.RADIUS)
+                display.bar_radius(67, 8, 164, 54, ui.GREEN, ui.BG, ui.RADIUS)
                 type_icon = res.load(ui.ICON_CONFIRM2)
                 display.icon(228 - 30, 28, type_icon, ui.WHITE, ui.GREEN)
                 display.text(offset_x, 40, self.content, ui.BOLD, ui.WHITE, ui.GREEN)
 
             elif self.sugg_word is not None:
                 # auto-suggest button + content + suggestion
-                display.bar_radius(63, 8, 168, 54, ui.BLACKISH, ui.BG, ui.RADIUS)
+                display.bar_radius(67, 8, 164, 54, ui.BLACKISH, ui.BG, ui.RADIUS)
                 display.text(offset_x, 40, self.content, ui.BOLD, ui.FG, ui.BLACKISH)
                 sugg_text = self.sugg_word[len(self.content):]
                 sugg_x = offset_x + content_width
