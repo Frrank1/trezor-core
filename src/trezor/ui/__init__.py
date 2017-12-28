@@ -109,7 +109,7 @@ def layout(f):
 def header(title: str, icon: bytes=ICON_RESET, fg: int=BG, bg: int=BG, ifg: int=BG):
     if icon is not None:
         display.icon(14, 14, res.load(icon), ifg, bg)
-    display.text(48, 35, title, BOLD, fg, bg)
+    display.text(44, 35, title, BOLD, fg, bg)
 
 
 class Widget:
